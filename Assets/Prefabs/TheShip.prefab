@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7172940247c8b55438da07eec3bae689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThrustSpeed: 5
+  ThrustSpeed: 1
   MaxVelocity: 5
 --- !u!114 &1487674773751408715
 MonoBehaviour:
@@ -183,6 +183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RedBullet: {fileID: 8953354206594168056, guid: 3417b5020dac0b44b82f44a107baa63b, type: 3}
+  GreenBullet: {fileID: 8953354206594168056, guid: ce8064c1cd9bc82489e986ed95b6f1ab, type: 3}
+  BlueBullet: {fileID: 8953354206594168056, guid: a77e39c20e840844bb998b21f477d545, type: 3}
+  bulletSpeed: 6
 --- !u!1 &1776899320713338419
 GameObject:
   m_ObjectHideFlags: 0

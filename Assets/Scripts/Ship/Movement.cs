@@ -46,18 +46,14 @@ namespace Dyelaga.Ship
             if((_horizontalThrust > 0 && _rigidbody2D.velocity.x < 0)
                 || (_horizontalThrust < 0 && _rigidbody2D.velocity.x > 0))
             {
-                Debug.Log("Slow boi x");
                 _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
             }
-
 
             if((_verticalThrust > 0 && _rigidbody2D.velocity.y < 0)
                 || (_verticalThrust < 0 && _rigidbody2D.velocity.y > 0))
             {
-                Debug.Log("Slow boi y");
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
             }
-
 
             Vector2 force = (new Vector2(_horizontalThrust, _verticalThrust));
 
