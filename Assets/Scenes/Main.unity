@@ -682,14 +682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 565826028}
     m_Modifications:
-    - target: {fileID: 515711110928625118, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
-      propertyPath: m_LinearDrag
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 515711110928625118, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1130727937631414515, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -745,14 +737,6 @@ PrefabInstance:
     - target: {fileID: 1130727938837767503, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233698712194429887, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
-      propertyPath: MaxVelocity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233698712194429887, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
-      propertyPath: ThrustSpeed
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
@@ -1021,6 +1005,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4305399601036678322, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
       propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305399601036678322, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
+      propertyPath: m_TagString
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4828607421392120060, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
