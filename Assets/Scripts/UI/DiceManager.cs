@@ -106,6 +106,33 @@ namespace Dyelaga {
         {
         }
 
+
+        void TaskDieDroppedOn((GameObject, GameObject) slotAndDie) {
+            var slot = slotAndDie.Item1;
+            var die = slotAndDie.Item2;
+
+            var dieIndex = _Dice.FindIndex(x => GameObject.ReferenceEquals(x.GameObject, die) && x.Position == DiePosition.Pool);
+            if (dieIndex != -1) {
+                // Mimicing click here so we can keep click for accessibility
+                TaskClickedIndex(dieIndex);
+                // This is f*cking hideous
+                // I did try object equality
+                // It didn't like it
+                // Tried reference equals
+                // Didn't like it
+                // Tried instance ID
+                // Didn't like it
+                // So you get names...
+                if (slot.name == redButton.name ) {
+                    TaskClickedSlot(DiePosition.Red);
+                } else if (slot.name == greenButton.name) {
+                    TaskClickedSlot(DiePosition.Green);
+                } else if (slot.name == blueButton.name) {
+                    TaskClickedSlot(DiePosition.Blue);
+                }
+            }
+        }
+
         void TaskClickedIndex(int index) {
             _clickedIndex = index;
         }
