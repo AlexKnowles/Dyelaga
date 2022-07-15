@@ -21,7 +21,15 @@ namespace Dyelaga {
 
         public GameObject dicePoolSlot;
 
-        private (int, int, int) _RGBSlotNumbers = (0, 0, 0);
+
+        public TMP_Text redLabel;
+        public TMP_Text blueLabel;
+        public TMP_Text greenLabel;
+
+        public Button redButton;
+        public Button blueButton;
+        public Button greenButton;
+
 
         private List<GameObject> _diceButtons = new List<GameObject>();
 
@@ -61,9 +69,10 @@ namespace Dyelaga {
         // Update is called once per frame
         void Update()
         {
-            dicePool.Red.NumberOfBullets = _RGBSlotNumbers.Item1;
-            dicePool.Green.NumberOfBullets = _RGBSlotNumbers.Item2;
-            dicePool.Blue.NumberOfBullets = _RGBSlotNumbers.Item3;
+            // TODO: We only need to calc this when dice change really, this could get slow
+            dicePool.Red.NumberOfBullets = _Dice.Where(x => x.Position == DiePosition.Red).Select(x => x.Value).Sum();
+            dicePool.Green.NumberOfBullets = _Dice.Where(x => x.Position == DiePosition.Green).Select(x => x.Value).Sum();
+            dicePool.Blue.NumberOfBullets = _Dice.Where(x => x.Position == DiePosition.Blue).Select(x => x.Value).Sum();
         }
 
         void TaskReRollDice() {
