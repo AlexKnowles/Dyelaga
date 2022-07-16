@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: {fileID: 7173983001056693621, guid: cd0d525932ca27e419e2be757029299e, type: 3}
   StartTimeSeconds: 5
-  OffsetY: 0
+  OffsetY: 50
   Enemy: {fileID: 980062198137395812, guid: d7f8f2ce05d903b488136123b4b5d0a1, type: 3}
   NumberOfEnemies: 10
   ReleaseIntervalSeconds: 0.5
