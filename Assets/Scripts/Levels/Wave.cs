@@ -21,6 +21,10 @@ namespace Dyelaga.Levels
 
         private GameObject _pathInstance;
 
+        private List<GameObject> _instantiatedEnemies = new List<GameObject>();
+
+        private bool _waveComplete = false;
+
         void Start() {
             // Doing this so we can have an abstract startime
             _startTime = Time.timeAsDouble;
@@ -40,6 +44,11 @@ namespace Dyelaga.Levels
                 _NumberOfEnemiesSpawned++;
                 SpawnEnemy();
             }
+
+            if (!_waveComplete && _NumberOfEnemiesSpawned == NumberOfEnemies && 
+                _instantiatedEnemies.All(go => go == null))  {
+                _waveComplete = true;
+            }
         }
 
         public void SpawnEnemy()
@@ -55,7 +64,12 @@ namespace Dyelaga.Levels
             pathLineRenderer.GetPositions(positions);
             enemy.GetComponent<Enemy.Movement>().SetPath(positions);
             
+            _instantiatedEnemies.Add(enemy);
             // Selection.activeGameObject = enemy;
+        }
+
+        public bool GetWaveComplete() {
+            return _waveComplete;
         }
     }
 }

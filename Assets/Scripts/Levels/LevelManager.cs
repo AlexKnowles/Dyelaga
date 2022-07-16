@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace Dyelaga.Levels
     {
         public List<GameObject> Waves = new List<GameObject>();
 
+        public GameObject GameManager;
+
         private List<Wave> _waveComponents;
 
         private List<GameObject> _instantiatedWaves = new List<GameObject>();
@@ -19,6 +22,8 @@ namespace Dyelaga.Levels
         // Start is called before the first frame update
         void Start()
         {
+            if (GameManager is null)
+                Console.Error.WriteLine("LevelManager needs reference to GameManager");
             // This is just to be able to do it from "level start" in future;
             _startTime = Time.timeAsDouble;
             if (Waves.Count() == 0) {
@@ -42,6 +47,14 @@ namespace Dyelaga.Levels
                         .Take(targetWaveCount - currentWaveCount)
                         .Select(x => Instantiate(x, transform.position, new Quaternion(), transform)));
 
+            }
+
+            if (_waveComponents.Count() == _instantiatedWaves.Count()) {
+                // All waves have been instantiated, we just need to check if they all completed.
+                if (_instantiatedWaves.All(x => x.GetComponent<Wave>().GetWaveComplete())) {
+                    // Game is complete!
+                    GameManager.GetComponent<SceneFlipper>().CompleteScene();
+                }
             }
         }
     }
