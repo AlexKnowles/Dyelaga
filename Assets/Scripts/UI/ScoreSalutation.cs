@@ -15,7 +15,12 @@ namespace Dyelaga.UI
         void Start()
         {
             _textObject = GetComponent<TextMeshProUGUI>();
-            _score = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager.Score>();
+            var gameManager = GameObject.FindGameObjectWithTag("GameManager");
+            if (gameManager != null) {
+                _score = gameManager.GetComponent<GameManager.Score>();
+            } else {
+                Debug.Log("Missing score for score display");
+            }
             _textObject.text = "Final Score:";
         }
 

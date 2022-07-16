@@ -11,9 +11,7 @@ namespace Dyelaga.GameManager
 
         void Awake()
         {
-            DontDestroyOnLoad(transform.gameObject);
             CurrentScore = 0;
-            Died = false;
         }
 
         public void Add(int value)

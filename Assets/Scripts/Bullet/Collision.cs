@@ -32,7 +32,9 @@ namespace Dyelaga.Bullet
                     }
                     else
                     {
-                        fadeOut.Begin();
+                        if (fadeOut != null) {
+                            fadeOut.Begin();
+                        }
                         GetComponent<Collider2D>().enabled = false;
                     }
                 }
