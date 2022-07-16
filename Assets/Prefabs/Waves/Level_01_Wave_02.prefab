@@ -47,6 +47,6 @@ MonoBehaviour:
   Path: {fileID: 4797997963094548819, guid: 640459aa40000fe94bb3777b7c1cede0, type: 3}
   StartTimeSeconds: 5
   OffsetY: -1
-  Enemy: {fileID: 980062198137395812, guid: d7f8f2ce05d903b488136123b4b5d0a1, type: 3}
+  Enemy: {fileID: 980062198137395812, guid: 4c299f6d9a3b3449ebeec59f88a3f9ce, type: 3}
   NumberOfEnemies: 30
   ReleaseIntervalSeconds: 0.5
