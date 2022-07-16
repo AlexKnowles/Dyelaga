@@ -150,16 +150,24 @@ namespace Dyelaga {
             _clickedIndex = -1;
             _Dice.ForEach(d => Destroy(d.GameObject));
 
-            int mod = -50;
-            _Dice = _Dice.Select((x, i) => { 
+            int xColumn = -50;
+            _Dice = _Dice.Select((x, i) => {
+                int xFuzz = UnityEngine.Random.Range(-10, 10);
+                int yFuzz = UnityEngine.Random.Range(-10, 10);
+                int rotation = UnityEngine.Random.Range(-90, 90);
                 x.Value = UnityEngine.Random.Range(1, 6); 
                 x.Position = DiePosition.Pool;
-                x.GameObject = Instantiate (dicebuttonPrefab, new Vector3(dicePoolSlot.transform.position.x + mod ,dicePoolSlot.transform.position.y, dicePoolSlot.transform.position.z) , Quaternion.identity);
+                x.GameObject = Instantiate (dicebuttonPrefab, 
+                    new Vector2(
+                        dicePoolSlot.transform.position.x + xColumn + xFuzz,
+                        dicePoolSlot.transform.position.y + yFuzz //,
+                        //dicePoolSlot.transform.position.z
+                    ) , Quaternion.identity * Quaternion.Euler(0, 0, rotation));
                 x.GameObject.transform.SetParent(dicePoolSlot.transform);
                 Button btn = x.GameObject.GetComponent<Button>();
                 btn.GetComponentInChildren<TMP_Text>().text = x.Value.ToString();
                 btn.onClick.AddListener(() => TaskClickedIndex(i));
-                mod = mod + 50;
+                xColumn = xColumn + 50;
                 return x; 
             }).ToList();
             UpdateDiceNumbers();
