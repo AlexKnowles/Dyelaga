@@ -22,7 +22,6 @@ namespace Dyelaga.Levels
             _startTime = Time.timeAsDouble;
             Waves = Waves.OrderBy(x => x.GetComponent<Wave>().StartTimeSeconds).ToList();
             _waveComponents = Waves.Select(x => x.GetComponent<Wave>()).ToList();
-            Debug.Log(_waveComponents.Count());
         }
 
         // Update is called once per frame
