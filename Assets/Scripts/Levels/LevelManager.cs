@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEditor;
+using Dyelaga.GameManager;
 
 namespace Dyelaga.Levels
 {
@@ -53,7 +54,7 @@ namespace Dyelaga.Levels
                 // All waves have been instantiated, we just need to check if they all completed.
                 if (_instantiatedWaves.All(x => x.GetComponent<Wave>().GetWaveComplete())) {
                     // Game is complete!
-                    GameManager.GetComponent<SceneFlipper>().CompleteScene();
+                    GameManager.GetComponent<GameFinish>().EndGameComplete();
                 }
             }
         }
