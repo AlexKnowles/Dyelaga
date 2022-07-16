@@ -15,7 +15,7 @@ namespace Dyelaga.Ship
         Bullets _bullets;
         List<string> _bulletsToFire;
         float _timeSinceLastFire;
-        float float _timeBetweenShots;
+        float _timeBetweenShots;
         float _shotSpread;
         int _lastShotIndex;
         float _numberOfStreams;
