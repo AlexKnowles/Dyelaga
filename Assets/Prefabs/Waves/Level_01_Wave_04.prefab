@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6204344878211363333}
   - component: {fileID: 1594341712607793856}
   m_Layer: 0
-  m_Name: Level_01_Wave_01
+  m_Name: Level_01_Wave_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df30613ae207a94d8507d26b43cf458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: {fileID: 5288148022897528079, guid: 7d54a20fcf4cfd321b585c33349c98f5, type: 3}
-  StartTimeSeconds: 0
-  OffsetY: 2
+  Path: {fileID: 1501529170415306597, guid: 14767f26a4e1417af98771dd34d0393c, type: 3}
+  StartTimeSeconds: 12
+  OffsetY: 0
   Enemy: {fileID: 980062198137395812, guid: d7f8f2ce05d903b488136123b4b5d0a1, type: 3}
-  NumberOfEnemies: 20
+  NumberOfEnemies: 15
   ReleaseIntervalSeconds: 1
