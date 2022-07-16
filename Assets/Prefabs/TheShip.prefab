@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6233698712194429887}
   - component: {fileID: 1487674773751408715}
   - component: {fileID: 513695183796261617}
+  - component: {fileID: 853417974528733846}
   m_Layer: 0
   m_Name: TheShip
   m_TagString: Untagged
@@ -171,6 +172,8 @@ MonoBehaviour:
   ShootingPoint: {fileID: 1776899320713338419}
   BaseFireSpeed: 0.05
   FireStreamSpacing: 0.2
+  NumberOfBulletsToSplit: 6
+  _timeBetweenShots: 0
 --- !u!114 &513695183796261617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +190,22 @@ MonoBehaviour:
   GreenBullet: {fileID: 8953354206594168056, guid: ce8064c1cd9bc82489e986ed95b6f1ab, type: 3}
   BlueBullet: {fileID: 8953354206594168056, guid: a77e39c20e840844bb998b21f477d545, type: 3}
   bulletSpeed: 6
+--- !u!58 &853417974528733846
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130727938837767502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.12
 --- !u!1 &1776899320713338419
 GameObject:
   m_ObjectHideFlags: 0

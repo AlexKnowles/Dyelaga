@@ -39,6 +39,7 @@ namespace Dyelaga.Ship
             {            
                 GameObject bullet = Instantiate(chosenBullet, position, new Quaternion(), _bulletContainer.transform);
                 bullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up*bulletSpeed, ForceMode2D.Impulse);
+                Destroy(bullet, 5f);
             }
         }
     }

@@ -9,14 +9,17 @@ namespace Dyelaga.Ship
         public GameObject ShootingPoint;
         public float BaseFireSpeed = 0.05f;
         public float FireStreamSpacing = 0.5f;
+        public int NumberOfBulletsToSplit = 6;
         
         DicePool _dicePool;
         Bullets _bullets;
         List<string> _bulletsToFire;
         float _timeSinceLastFire;
-        float _timeBetweenShots;
+        float float _timeBetweenShots;
         float _shotSpread;
         int _lastShotIndex;
+        float _numberOfStreams;
+        float _fullWidthOfStreams;
 
         void Start()
         {
@@ -49,7 +52,9 @@ namespace Dyelaga.Ship
                 }
             }
             
-            _timeBetweenShots = (BaseFireSpeed + (0.15f / _bulletsToFire.Count));
+            _numberOfStreams = Mathf.Floor(_bulletsToFire.Count/NumberOfBulletsToSplit);
+            _timeBetweenShots = (BaseFireSpeed + ((0.15f / (_bulletsToFire.Count / (_numberOfStreams + 1)))));
+            _fullWidthOfStreams = (_numberOfStreams * FireStreamSpacing);
         }
 
         void FixedUpdate()
@@ -58,11 +63,7 @@ namespace Dyelaga.Ship
 
             if (_timeSinceLastFire >= _timeBetweenShots && _bulletsToFire.Count > 0)
             { 
-                float numberOfStreams = Mathf.Floor(_bulletsToFire.Count/10);
-
-                float fullWidthOfStreams = (numberOfStreams * FireStreamSpacing);
-
-                for(var i = 0; i <= numberOfStreams; i++) 
+                for(var i = 0; i <= _numberOfStreams; i++) 
                 { 
                     _lastShotIndex++;
 
@@ -70,7 +71,7 @@ namespace Dyelaga.Ship
                         _lastShotIndex = 0;
                     } 
 
-                    Vector3 position = new Vector3(ShootingPoint.transform.position.x - (fullWidthOfStreams / 2) + (FireStreamSpacing * i) , ShootingPoint.transform.position.y, ShootingPoint.transform.position.z);
+                    Vector3 position = new Vector3(ShootingPoint.transform.position.x - (_fullWidthOfStreams / 2) + (FireStreamSpacing * i) , ShootingPoint.transform.position.y, ShootingPoint.transform.position.z);
                     
                     _bullets.SpawnBullet(_bulletsToFire[_lastShotIndex], position);
 
