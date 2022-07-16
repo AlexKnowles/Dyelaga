@@ -58,7 +58,7 @@ namespace Dyelaga.Ship
 
             if (_timeSinceLastFire >= _timeBetweenShots && _bulletsToFire.Count > 0)
             { 
-                int numberOfStreams = Mathf.Floor(_bulletsToFire.Count/10);
+                float numberOfStreams = Mathf.Floor(_bulletsToFire.Count/10);
 
                 for(var i = 0; i <= numberOfStreams; i++) 
                 { 
