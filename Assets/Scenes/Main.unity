@@ -2709,6 +2709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waves:
   - {fileID: 6473866879582996157, guid: 492d241779bbbaa458e5e5308f8ab33e, type: 3}
+  - {fileID: 6473866879582996157, guid: b6162c012931cd287a62c5237298880e, type: 3}
 --- !u!1 &1723935015
 GameObject:
   m_ObjectHideFlags: 0
