@@ -19,22 +19,22 @@ namespace Dyelaga.Enemy
             _currentHealth = MaxHealth;
         }
 
-        public void TakeHit(string nameOfHittingObject)
+        public bool TakeHit(string nameOfHittingObject)
         {
             if(nameOfHittingObject.Contains(_enemyColour))
             {
                 _currentHealth -= 3;
-            }
-            else
-            {
-                _currentHealth--;
-            }
+                
+                if(_currentHealth <= 0)
+                {
+                    _score.Add(MaxHealth);
+                    Destroy(this.gameObject);
+                }
 
-            if(_currentHealth <= 0)
-            {
-                _score.Add(MaxHealth);
-                Destroy(this.gameObject);
+                return true;
             }
+            
+            return false;
         }
     }    
 }

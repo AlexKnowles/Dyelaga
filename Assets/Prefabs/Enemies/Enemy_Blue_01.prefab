@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 980062198137395835}
   - component: {fileID: 980062198137395834}
   - component: {fileID: 980062198137395813}
-  - component: {fileID: 939789364442616003}
   - component: {fileID: -1502226845164076275}
   - component: {fileID: -6083352317164389993}
   - component: {fileID: 8198098138541536176}
+  - component: {fileID: 4249811033365681653}
   m_Layer: 0
   m_Name: Enemy_Blue_01
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 980062198137395812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.26759863, y: 0.24324971, z: 0.33838978}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -355049978, guid: 65b9fbe0ae6cc5c48a084e0d63c5d7b6, type: 3}
   m_Color: {r: 0.2520915, g: 0.49761432, b: 0.9716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,22 +110,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &939789364442616003
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980062198137395812}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!114 &-1502226845164076275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +152,19 @@ MonoBehaviour:
   MaxVelocity: 200
   MaxAngularVelocity: 180
   PointSwitchDistance: 1
+--- !u!58 &4249811033365681653
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.48

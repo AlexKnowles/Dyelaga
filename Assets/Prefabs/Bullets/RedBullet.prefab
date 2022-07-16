@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3615896956847218507}
   - component: {fileID: 572028329380573594}
   - component: {fileID: 994327997240451650}
+  - component: {fileID: 575858493414328105}
   m_Layer: 0
   m_Name: RedBullet
   m_TagString: Untagged
@@ -146,3 +147,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &575858493414328105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953354206594168056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e604d7eb45d4a514886553451371ec37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeOutSpeedInSeconds: 1
