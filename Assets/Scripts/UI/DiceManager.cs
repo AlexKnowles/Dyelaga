@@ -9,7 +9,7 @@ using TMPro;
 #nullable enable
 #nullable disable warnings
 
-namespace Dyelaga {
+namespace Dyelaga.GameManager {
 
     public class DiceManager : MonoBehaviour
     {

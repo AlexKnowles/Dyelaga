@@ -14,6 +14,13 @@ namespace Dyelaga.Bullet
             {
                 Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             } else {
+                Enemy.Health enemy = collision.gameObject.GetComponent< Enemy.Health>();
+
+                if(enemy != null)
+                {
+                    enemy.TakeHit(this.gameObject.name);
+                }
+
                 Destroy(this.gameObject);
             }
         }

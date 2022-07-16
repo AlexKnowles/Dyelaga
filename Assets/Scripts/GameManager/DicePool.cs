@@ -5,7 +5,7 @@ using System;
 using System.Runtime.Serialization;
 
 
-namespace Dyelaga
+namespace Dyelaga.GameManager
 {
     public class DicePool : MonoBehaviour
     {

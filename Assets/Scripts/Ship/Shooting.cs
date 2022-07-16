@@ -11,7 +11,7 @@ namespace Dyelaga.Ship
         public float FireStreamSpacing = 0.5f;
         public int NumberOfBulletsToSplit = 6;
         
-        DicePool _dicePool;
+        GameManager.DicePool _dicePool;
         Bullets _bullets;
         List<string> _bulletsToFire;
         float _timeSinceLastFire;
@@ -23,7 +23,7 @@ namespace Dyelaga.Ship
 
         void Start()
         {
-            _dicePool = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DicePool>();
+            _dicePool = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager.DicePool>();
             _bullets = GetComponent<Bullets>();
             _bulletsToFire = new List<string>();
             _timeSinceLastFire = BaseFireSpeed;
