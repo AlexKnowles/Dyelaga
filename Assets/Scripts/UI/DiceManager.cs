@@ -150,10 +150,11 @@ namespace Dyelaga {
             _clickedIndex = -1;
             _Dice.ForEach(d => Destroy(d.GameObject));
 
-            int xColumn = -50;
+            int xColumn = -125;
+            int jiggle = 30;
             _Dice = _Dice.Select((x, i) => {
-                int xFuzz = UnityEngine.Random.Range(-10, 10);
-                int yFuzz = UnityEngine.Random.Range(-10, 10);
+                int xFuzz = UnityEngine.Random.Range(-jiggle, jiggle);
+                int yFuzz = UnityEngine.Random.Range(-jiggle, jiggle);
                 int rotation = UnityEngine.Random.Range(-90, 90);
                 x.Value = UnityEngine.Random.Range(1, 6); 
                 x.Position = DiePosition.Pool;
@@ -167,7 +168,7 @@ namespace Dyelaga {
                 Button btn = x.GameObject.GetComponent<Button>();
                 btn.GetComponentInChildren<TMP_Text>().text = x.Value.ToString();
                 btn.onClick.AddListener(() => TaskClickedIndex(i));
-                xColumn = xColumn + 50;
+                xColumn = xColumn + 125;
                 return x; 
             }).ToList();
             UpdateDiceNumbers();
