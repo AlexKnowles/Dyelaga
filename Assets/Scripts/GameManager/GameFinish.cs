@@ -8,14 +8,15 @@ namespace Dyelaga.GameManager
 {
     public class GameFinish : MonoBehaviour
     {
+        public Score _score;
         public void EndGameDestroyed()
         {
-            GetComponent<Score>().Died = true;
+            _score.Died = true;
             GetComponent<SceneFlipper>().CompleteScene();
         }
         public void EndGameComplete()
         {
-            GetComponent<Score>().Died = false;
+            _score.Died = false;
             GetComponent<SceneFlipper>().CompleteScene();
         }
     }

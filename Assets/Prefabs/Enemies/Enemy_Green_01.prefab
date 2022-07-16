@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  _score: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
 --- !u!114 &-6083352317164389993
 MonoBehaviour:
   m_ObjectHideFlags: 0

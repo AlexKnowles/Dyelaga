@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Dyelaga.GameManager
 {
-    public class Score : MonoBehaviour
+    [CreateAssetMenu(fileName = "Score", menuName = "ScriptableObject/GameManager")]
+    public class Score : ScriptableObject
     {
         public int CurrentScore;
         public bool Died = false;

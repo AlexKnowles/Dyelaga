@@ -10,17 +10,11 @@ namespace Dyelaga.UI
     public class ScoreDisplay : MonoBehaviour
     {
         TextMeshProUGUI _textObject;
-        GameManager.Score _score;
+        [SerializeField] public GameManager.Score _score;
 
         void Start()
         {
             _textObject = GetComponent<TextMeshProUGUI>();
-            var gameManager = GameObject.FindGameObjectWithTag("GameManager");
-            if (gameManager != null) {
-                _score = gameManager.GetComponent<GameManager.Score>();
-            } else {
-                Debug.Log("Missing score for score display");
-            }
             _textObject.text = "0";
         }
 

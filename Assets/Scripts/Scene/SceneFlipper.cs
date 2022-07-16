@@ -6,7 +6,8 @@ using Dyelaga.GameManager;
 
 namespace Dyelaga.Levels
 {
-    public class SceneFlipper : MonoBehaviour {  
+    public class SceneFlipper : MonoBehaviour {
+        [SerializeField] public GameManager.Score Score;
         public void StartScene() {  
             SceneManager.LoadScene("Start");  
         }  
@@ -15,6 +16,10 @@ namespace Dyelaga.Levels
         }  
         public void CompleteScene() {  
             SceneManager.LoadScene("Complete");  
+        }
+        public void ResetScore() {
+            Score.CurrentScore = 0;
+            Score.Died = false;
         }
     }   
 }

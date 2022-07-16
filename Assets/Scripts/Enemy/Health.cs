@@ -8,13 +8,12 @@ namespace Dyelaga.Enemy
     {
         public int MaxHealth = 3;
 
-        GameManager.Score _score;
+        [SerializeField] public GameManager.Score _score;
         string _enemyColour;
         int _currentHealth;
         
         void Awake()
         {
-            _score = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager.Score>();
             _enemyColour = this.gameObject.name.Split("_")[1];
             _currentHealth = MaxHealth;
         }

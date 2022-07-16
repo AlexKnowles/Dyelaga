@@ -12173,6 +12173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e9e617c94aa14dad538e0b3207e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
 --- !u!114 &1365669666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12494,6 +12495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e9e617c94aa14dad538e0b3207e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
 --- !u!114 &1591066371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13022,6 +13024,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3750724133347915501, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
+      propertyPath: _score
+      value: 
+      objectReference: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
     - target: {fileID: 4305399601036678322, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -13080,6 +13086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2804304349701998231, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
+    - {fileID: 2062823255379275787, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4673ceb6f10138141b44f64870a7bd55, type: 3}
 --- !u!114 &1677878696088213258 stripped
 MonoBehaviour:
