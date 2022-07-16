@@ -8,7 +8,7 @@ namespace Dyelaga.Ship
     {
         public GameObject ShootingPoint;
         public float BaseFireSpeed = 0.05f;
-        public float BaseFireSpread = 0.5f;
+        public float FireStreamSpacing = 0.5f;
         
         DicePool _dicePool;
         Bullets _bullets;
@@ -60,6 +60,8 @@ namespace Dyelaga.Ship
             { 
                 float numberOfStreams = Mathf.Floor(_bulletsToFire.Count/10);
 
+                float fullWidthOfStreams = (numberOfStreams * FireStreamSpacing);
+
                 for(var i = 0; i <= numberOfStreams; i++) 
                 { 
                     _lastShotIndex++;
@@ -68,7 +70,7 @@ namespace Dyelaga.Ship
                         _lastShotIndex = 0;
                     } 
 
-                    Vector2 position = new Vector2(ShootingPoint.transform.position.x - (BaseFireSpread/2) + ((BaseFireSpread/numberOfStreams)*i), ShootingPoint.transform.position.y);
+                    Vector3 position = new Vector3(ShootingPoint.transform.position.x - (fullWidthOfStreams / 2) + (FireStreamSpacing * i) , ShootingPoint.transform.position.y, ShootingPoint.transform.position.z);
                     
                     _bullets.SpawnBullet(_bulletsToFire[_lastShotIndex], position);
 

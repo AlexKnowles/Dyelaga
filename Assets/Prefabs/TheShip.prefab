@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootingPoint: {fileID: 1776899320713338419}
-  MaxFireSpeed: 0.5
+  BaseFireSpeed: 0.05
+  FireStreamSpacing: 0.2
 --- !u!114 &513695183796261617
 MonoBehaviour:
   m_ObjectHideFlags: 0
