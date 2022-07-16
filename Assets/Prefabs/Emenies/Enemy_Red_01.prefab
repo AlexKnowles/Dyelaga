@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 980062198137395812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33838978, y: 0.33838978, z: 0.33838978}
+  m_LocalScale: {x: 0.26759863, y: 0.24324971, z: 0.33838978}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &939789364442616003
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b893466ea02c62f4f8b44555ba6bc49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThrustSpeed: 10
+  ThrustSpeed: 2
   RotationSpeed: 0.1
   MaxVelocity: 200
   MaxAngularVelocity: 180

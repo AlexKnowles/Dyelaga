@@ -46,11 +46,10 @@ namespace Dyelaga.Levels
         {
             LineRenderer pathLineRenderer = _pathInstance.GetComponent<LineRenderer>();
             Vector3 firstPosition = pathLineRenderer.GetPosition(0);
-            Vector3 nextPosition = pathLineRenderer.GetPosition(1);
 
             firstPosition = new Vector3(firstPosition.x, firstPosition.y, 0);
 
-            GameObject enemy = Instantiate(Enemy, firstPosition, Quaternion.LookRotation(nextPosition), transform);
+            GameObject enemy = Instantiate(Enemy, firstPosition, new Quaternion(), transform);
 
             Vector3[] positions = new Vector3[pathLineRenderer.positionCount];
             pathLineRenderer.GetPositions(positions);

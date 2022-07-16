@@ -50,8 +50,7 @@ namespace Dyelaga.Enemy
                     Destroy(this.gameObject);
                 }
             }
-
-           _torque = CalculateTorque();
+ 
         }   
 
         void FixedUpdate()
@@ -61,8 +60,14 @@ namespace Dyelaga.Enemy
                 return;
             }
 
-            UpdateThrust();
-            UpdateTorque();
+            
+            Vector3 dir = ((Vector2)_nextPosition - _rigidbody2D.position);
+            dir /= Time.fixedDeltaTime;
+            dir = Vector3.ClampMagnitude(dir, ThrustSpeed);
+            _rigidbody2D.velocity = dir;
+
+            // UpdateThrust();
+            // UpdateTorque();
         }
 
         public void SetPath(Vector3[] path)
