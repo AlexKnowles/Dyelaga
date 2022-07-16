@@ -17,6 +17,5 @@ namespace Dyelaga.GameManager
         {
             CurrentScore += value;
         }
-
     }
 }
