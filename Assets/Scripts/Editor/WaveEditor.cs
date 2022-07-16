@@ -15,7 +15,7 @@ namespace Dyelaga.Levels
             Wave wave = (Wave)target;
             if(GUILayout.Button("Spawn Enemy"))
             {
-                wave.SpawnEnemy();
+                wave.SpawnEnemy();                
             }
         }
 

@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace Dyelaga.Levels
 {
@@ -12,7 +13,7 @@ namespace Dyelaga.Levels
         public float OffsetY;
         public GameObject Enemy;
         public int NumberOfEnemies;
-        public float ReleaseIntervalSeconds = 0.5f;
+        public float ReleaseIntervalSeconds = 2f;
 
         private int _NumberOfEnemiesSpawned = 0;
 
@@ -43,11 +44,19 @@ namespace Dyelaga.Levels
 
         public void SpawnEnemy()
         {
-            Vector3 firstPosition = _pathInstance.GetComponent<LineRenderer>().GetPosition(0);
+            LineRenderer pathLineRenderer = _pathInstance.GetComponent<LineRenderer>();
+            Vector3 firstPosition = pathLineRenderer.GetPosition(0);
+            Vector3 nextPosition = pathLineRenderer.GetPosition(1);
 
             firstPosition = new Vector3(firstPosition.x, firstPosition.y, 0);
 
-            Instantiate(Enemy, firstPosition, new Quaternion(), transform);
+            GameObject enemy = Instantiate(Enemy, firstPosition, Quaternion.LookRotation(nextPosition), transform);
+
+            Vector3[] positions = new Vector3[pathLineRenderer.positionCount];
+            pathLineRenderer.GetPositions(positions);
+            enemy.GetComponent<Enemy.Movement>().SetPath(positions);
+            
+            // Selection.activeGameObject = enemy;
         }
     }
 }

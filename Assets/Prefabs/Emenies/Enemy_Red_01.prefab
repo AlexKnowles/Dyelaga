@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 980062198137395834}
   - component: {fileID: 980062198137395813}
   - component: {fileID: 939789364442616003}
+  - component: {fileID: -6083352317164389993}
+  - component: {fileID: 8198098138541536176}
   m_Layer: 0
   m_Name: Enemy_Red_01
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980062198137395812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3308, y: 0.6616, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.33838978, y: 0.33838978, z: 0.33838978}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +101,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 15
-  m_LinearDrag: 1
+  m_LinearDrag: 11
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -123,3 +125,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &-6083352317164389993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0c6d1d479bc1c48876488f1c17851b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8198098138541536176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b893466ea02c62f4f8b44555ba6bc49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrustSpeed: 10
+  RotationSpeed: 0.1
+  MaxVelocity: 200
+  MaxAngularVelocity: 180
+  PointSwitchDistance: 1
