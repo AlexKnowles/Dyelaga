@@ -4984,6 +4984,13 @@ MonoBehaviour:
   rerollButton: {fileID: 1203512151}
   dicebuttonPrefab: {fileID: 1628309945692848669, guid: f0e77d97f709360a6b6e4faa942d0618, type: 3}
   dicePoolSlot: {fileID: 93288025}
+  diceImages:
+  - {fileID: 21300000, guid: 600bbc6e5d67cc940b51512db1aaf95e, type: 3}
+  - {fileID: 21300000, guid: 87d01148f0f6e6a4aad2151084d18c3a, type: 3}
+  - {fileID: 21300000, guid: 167c8751ce8d2e447851940fd94fad4a, type: 3}
+  - {fileID: 21300000, guid: d3b1802530d9112499b425f911ff00e2, type: 3}
+  - {fileID: 21300000, guid: 8b6930edc4a99b545a75c2a3c7669048, type: 3}
+  - {fileID: 21300000, guid: 49e208d22d37e98489c2f9c4436d9724, type: 3}
   redLabel: {fileID: 1050670035}
   blueLabel: {fileID: 1612414938}
   greenLabel: {fileID: 1570732277}

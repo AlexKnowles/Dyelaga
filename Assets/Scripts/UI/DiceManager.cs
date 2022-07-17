@@ -21,6 +21,8 @@ namespace Dyelaga.GameManager {
 
         public GameObject dicePoolSlot;
 
+        public List<Sprite> diceImages;
+
 
         public TMP_Text redLabel;
         public TMP_Text blueLabel;
@@ -166,7 +168,7 @@ namespace Dyelaga.GameManager {
                     ) , Quaternion.identity * Quaternion.Euler(0, 0, rotation));
                 x.GameObject.transform.SetParent(dicePoolSlot.transform);
                 Button btn = x.GameObject.GetComponent<Button>();
-                btn.GetComponentInChildren<TMP_Text>().text = x.Value.ToString();
+                x.GameObject.GetComponent<Image>().sprite = diceImages[x.Value -1];
                 btn.onClick.AddListener(() => TaskClickedIndex(i));
                 xColumn = xColumn + 125;
                 return x; 
