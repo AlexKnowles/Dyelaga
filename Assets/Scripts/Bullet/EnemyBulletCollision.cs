@@ -6,12 +6,6 @@ namespace Dyelaga.Bullet
 {
     public class EnemyBulletCollision : MonoBehaviour
     {
-        FadeOut fadeOut;
-
-        void Start()
-        {
-            fadeOut = GetComponent<FadeOut>();
-        }
 
         void OnCollisionEnter2D (Collision2D collision)
         {

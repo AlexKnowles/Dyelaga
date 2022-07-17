@@ -7,7 +7,8 @@ namespace Dyelaga.Enemy
     public class Bullets : MonoBehaviour
     {
         public GameObject EnemyBullet;
-        public float bulletSpeed = 1;
+        public float bulletSpeed = 1f;
+        public float bulletOffset = 0.2f;
 
         GameObject _bulletContainer;
 
@@ -18,7 +19,8 @@ namespace Dyelaga.Enemy
 
         public void SpawnBullet(Vector2 direction, Vector2 position)
         {
-            GameObject bullet = Instantiate(EnemyBullet, position, new Quaternion(), _bulletContainer.transform);
+            // We are making an assumption here that the direction is always Vector2.up etc
+            GameObject bullet = Instantiate(EnemyBullet, position + (direction * bulletOffset), new Quaternion(), _bulletContainer.transform);
             bullet.GetComponent<Rigidbody2D>().AddRelativeForce(direction*bulletSpeed, ForceMode2D.Impulse);
             Destroy(bullet, 5f);
         }
