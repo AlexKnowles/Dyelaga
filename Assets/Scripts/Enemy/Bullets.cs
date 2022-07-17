@@ -7,7 +7,7 @@ namespace Dyelaga.Enemy
     public class Bullets : MonoBehaviour
     {
         public GameObject EnemyBullet;
-        public float bulletSpeed = 1f;
+        public float bulletSpeed = 0.5f;
         public float bulletOffset = 0.2f;
 
         GameObject _bulletContainer;

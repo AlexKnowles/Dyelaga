@@ -8,7 +8,7 @@ namespace Dyelaga.Enemy
     public class Shooting : MonoBehaviour
     {
         public float MinimumTimeBetweenShots = 0.5f;
-        public float OddsOfShot = 0.2f;
+        public float OddsOfShot = 0.1f;
         
         Bullets _bullets;
         float _timeSinceLastFire;

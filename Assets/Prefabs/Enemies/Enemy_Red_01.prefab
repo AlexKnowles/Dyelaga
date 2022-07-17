@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 4820402915423529946}
   - component: {fileID: 8442158563071180405}
   - component: {fileID: -3194282951944513932}
+  - component: {fileID: 809042909919591605}
+  - component: {fileID: 8114767792006353752}
   m_Layer: 0
   m_Name: Enemy_Red_01
   m_TagString: Untagged
@@ -184,7 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8953354206594168056, guid: f5ae9b361b3c2f4e4b8593ea2bca82b2, type: 3}
-  bulletSpeed: 1
+  bulletSpeed: 0.5
+  bulletOffset: 0.2
 --- !u!114 &-3194282951944513932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,5 +200,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29143685e509db5c5858070cd6b19215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseFireSpeed: 0.05
-  BaseTimeBetweenShots: 0.5
+  MinimumTimeBetweenShots: 0.5
+  OddsOfShot: 0.2
+--- !u!114 &809042909919591605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2280395159c7d9ad85a928ae0db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyBullet: {fileID: 8953354206594168056, guid: f5ae9b361b3c2f4e4b8593ea2bca82b2, type: 3}
+  bulletSpeed: 1
+  bulletOffset: 0.2
+--- !u!114 &8114767792006353752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29143685e509db5c5858070cd6b19215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimumTimeBetweenShots: 0.5
+  OddsOfShot: 0.1
