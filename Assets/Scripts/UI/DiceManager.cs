@@ -143,6 +143,7 @@ namespace Dyelaga.GameManager {
             if (_clickedIndex != -1) {
                 Destroy(_Dice[_clickedIndex].GameObject.GetComponent<DiceButton>());
                 _Dice[_clickedIndex].GameObject.GetComponent<Button>().interactable = false;
+                _Dice[_clickedIndex].GameObject.transform.localScale = Vector3.Scale(_Dice[_clickedIndex].GameObject.transform.localScale, new Vector3(0.5f, 0.5f, 0.5f));
                 _Dice[_clickedIndex].Position = position;
                 _clickedIndex = -1;
                 UpdateDiceNumbers();
