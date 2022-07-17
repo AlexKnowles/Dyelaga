@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +32,7 @@ namespace Dyelaga.Ship
         void FixedUpdate()
         {
             UpdateThrust();
-
+            
         }
 
         float CalculateThrust(float inputAxis)
@@ -59,6 +60,12 @@ namespace Dyelaga.Ship
 
             _rigidbody2D.AddRelativeForce(force, ForceMode2D.Impulse);
             _rigidbody2D.velocity = Vector2.ClampMagnitude(_rigidbody2D.velocity, MaxVelocity);
+            if (Math.Abs(_rigidbody2D.velocity.x) > 0.1) {
+                float skewFactor = 7f;
+                transform.rotation = Quaternion.Euler(0, _rigidbody2D.velocity.x * skewFactor, 0);
+            } else {
+                transform.rotation = new Quaternion();
+            }
         }        
     }
 }
