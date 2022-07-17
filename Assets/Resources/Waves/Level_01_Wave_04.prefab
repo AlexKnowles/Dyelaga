@@ -48,5 +48,5 @@ MonoBehaviour:
   StartTimeSeconds: 15
   OffsetY: 0
   Enemy: {fileID: 980062198137395812, guid: 281c90e5b2372d45b81078e8ea1ebf0a, type: 3}
-  NumberOfEnemies: 12
-  ReleaseIntervalSeconds: 1
+  NumberOfEnemies: 8
+  ReleaseIntervalSeconds: 2
