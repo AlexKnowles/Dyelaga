@@ -11,7 +11,7 @@ namespace Dyelaga.Enemy
         public float RotationSpeed = 1;
         public float MaxVelocity = 1;
         public float MaxAngularVelocity = 1;
-        public float PointSwitchDistance = 1;
+        public float PointSwitchDistance = 0.1f;
 
         Vector3[] _pathPositions;
         Vector3 _nextPosition;

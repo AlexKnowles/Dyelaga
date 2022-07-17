@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df30613ae207a94d8507d26b43cf458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: {fileID: 5535152873480224561, guid: 854a9ef9d0e83024f9a18c5277376dfc, type: 3}
-  StartTimeSeconds: 21
+  Path: {fileID: 2667648058152540530, guid: 9e8180c8e85c77944bd8ab016898a350, type: 3}
+  StartTimeSeconds: 27
   OffsetY: 0
-  Enemy: {fileID: 980062198137395812, guid: 4c299f6d9a3b3449ebeec59f88a3f9ce, type: 3}
-  NumberOfEnemies: 10
-  ReleaseIntervalSeconds: 0.5
+  Enemy: {fileID: 980062198137395812, guid: 281c90e5b2372d45b81078e8ea1ebf0a, type: 3}
+  NumberOfEnemies: 20
+  ReleaseIntervalSeconds: 0.7

@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df30613ae207a94d8507d26b43cf458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: {fileID: 1501529170415306597, guid: 14767f26a4e1417af98771dd34d0393c, type: 3}
-  StartTimeSeconds: 12
-  OffsetY: 4
-  Enemy: {fileID: 980062198137395812, guid: d7f8f2ce05d903b488136123b4b5d0a1, type: 3}
-  NumberOfEnemies: 15
+  Path: {fileID: 1649454086387008708, guid: 4373135d4c4c5bb4b8ebd7a529459380, type: 3}
+  StartTimeSeconds: 15
+  OffsetY: 0
+  Enemy: {fileID: 980062198137395812, guid: 281c90e5b2372d45b81078e8ea1ebf0a, type: 3}
+  NumberOfEnemies: 12
   ReleaseIntervalSeconds: 1

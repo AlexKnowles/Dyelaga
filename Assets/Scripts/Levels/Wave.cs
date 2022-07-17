@@ -29,6 +29,9 @@ namespace Dyelaga.Levels
             // Doing this so we can have an abstract startime
             _startTime = Time.timeAsDouble;
             _pathInstance = Instantiate(Path, transform.position, new Quaternion(), transform);
+            _pathInstance.GetComponent<LineRenderer>().startWidth=0;
+            _pathInstance.GetComponent<LineRenderer>().endWidth=0;
+            
             Vector3[] lrPos = new Vector3[_pathInstance.GetComponent<LineRenderer>().positionCount];
             _pathInstance.GetComponent<LineRenderer>().GetPositions(lrPos);
             lrPos = lrPos.Select(vec => {
