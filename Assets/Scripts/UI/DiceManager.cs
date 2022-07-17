@@ -141,7 +141,8 @@ namespace Dyelaga.GameManager {
 
         void TaskClickedSlot(DiePosition position) {
             if (_clickedIndex != -1) {
-                _Dice[_clickedIndex].GameObject.SetActive(false);
+                Destroy(_Dice[_clickedIndex].GameObject.GetComponent<DiceButton>());
+                _Dice[_clickedIndex].GameObject.GetComponent<Button>().interactable = false;
                 _Dice[_clickedIndex].Position = position;
                 _clickedIndex = -1;
                 UpdateDiceNumbers();
