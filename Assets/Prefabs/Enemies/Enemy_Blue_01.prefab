@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4249811033365681653}
   - component: {fileID: 3569616101716752102}
   - component: {fileID: -1212400928793833873}
+  - component: {fileID: -8422699524908948388}
   m_Layer: 0
   m_Name: Enemy_Blue_01
   m_TagString: Untagged
@@ -125,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  ExplosionImage: {fileID: 21300000, guid: 8c853ec60a63d5443a03dbf67a8ba9c7, type: 3}
   _score: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
 --- !u!114 &-6083352317164389993
 MonoBehaviour:
@@ -200,3 +202,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumTimeBetweenShots: 0.5
   OddsOfShot: 0.1
+--- !u!114 &-8422699524908948388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab9c3946cdeb72adbc12e27bf5cb3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

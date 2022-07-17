@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7200507537814890932}
   - component: {fileID: 1249456619493256446}
   - component: {fileID: 7673821696798067307}
+  - component: {fileID: 2393634304510630249}
   m_Layer: 0
   m_Name: Enemy_Green_01
   m_TagString: Untagged
@@ -125,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  ExplosionImage: {fileID: 21300000, guid: 6de635a8826600547a61629a99ae22ce, type: 3}
   _score: {fileID: 11400000, guid: b4312163ebefb23aca9d8307d8165911, type: 2}
 --- !u!114 &-6083352317164389993
 MonoBehaviour:
@@ -200,3 +202,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumTimeBetweenShots: 0.5
   OddsOfShot: 0.1
+--- !u!114 &2393634304510630249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980062198137395812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab9c3946cdeb72adbc12e27bf5cb3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
