@@ -15,10 +15,14 @@ namespace Dyelaga.Ship
         float _verticalThrust;
         float _horizontalThrust;
 
+        Vector3 _thrusterStartScale;
+        GameObject _rearThruster;
+
         void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-
+            _rearThruster = transform.Find("RearThruster").gameObject;
+            _thrusterStartScale = _rearThruster.transform.localScale;
             _verticalThrust = 0;
             _horizontalThrust = 0;
         }
@@ -65,6 +69,15 @@ namespace Dyelaga.Ship
                 transform.rotation = Quaternion.Euler(0, _rigidbody2D.velocity.x * skewFactor, 0);
             } else {
                 transform.rotation = new Quaternion();
+            }
+            if (_rearThruster) {
+                if (_rigidbody2D.velocity.y > 0.1) {
+                    //percent of max;
+                    var scale = _rigidbody2D.velocity.y / MaxVelocity;
+                    _rearThruster.transform.localScale = new Vector2(_thrusterStartScale.x, _thrusterStartScale.y * scale) ;
+                } else {
+                    _rearThruster.transform.localScale = new Vector2(0, 0);
+                }
             }
         }        
     }
