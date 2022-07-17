@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861aa523b1006ff48ac6117e603b20d6, type: 3}
   m_Name: Score
   m_EditorClassIdentifier: 
-  CurrentScore: 0
-  Died: 0
+  CurrentScore: 276
+  Died: 1

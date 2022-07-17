@@ -15,12 +15,12 @@ namespace Dyelaga.UI
         void Start()
         {
             _textObject = GetComponent<TextMeshProUGUI>();
-            _textObject.text = "Final Score:";
+            _textObject.text = "Winner";
         }
 
         void Update()
         {
-            _textObject.text = _score.Died ? "You Died:" : "Final Score:";
+            _textObject.text = _score.Died ? "Game Over" : "Winner";
         }
     }
 }
