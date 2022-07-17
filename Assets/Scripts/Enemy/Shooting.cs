@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,13 +8,13 @@ namespace Dyelaga.Enemy
     public class Shooting : MonoBehaviour
     {
         public float MinimumTimeBetweenShots = 0.5f;
-        public float OddsOfShot = 0.5f;
+        public float OddsOfShot = 0.2f;
         
         Bullets _bullets;
         float _timeSinceLastFire;
         float _timeBetweenShots;
         float _oddsOfShot;
-        BulletDirection _fireDirection;
+        Vector2 _fireDirection;
         GameObject _player;
 
         void Start()
@@ -23,12 +24,28 @@ namespace Dyelaga.Enemy
             _timeSinceLastFire = 0;
             _timeBetweenShots = MinimumTimeBetweenShots;
             _oddsOfShot = OddsOfShot;
-            _fireDirection = BulletDirection.Down;
+            _fireDirection = Vector2.down;
         }
         
         void Update()
         {
             // TODO: Set fire direction to player direction
+            var direction = _player.transform.position - transform.position;
+            if (Math.Abs(direction.x) > Math.Abs(direction.y)) {
+                // x axis
+                if (direction.x > 0) {
+                    _fireDirection = Vector2.right;
+                } else {
+                    _fireDirection = Vector2.left;
+                }
+            } else {
+                // y axis
+                if (direction.y > 0) {
+                    _fireDirection = Vector2.up;
+                } else {
+                    _fireDirection = Vector2.down;
+                }
+            }
         }
 
         void FixedUpdate()
