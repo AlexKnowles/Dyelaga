@@ -10878,6 +10878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheShip
       objectReference: {fileID: 0}
+    - target: {fileID: 1130727938837767502, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1130727938837767503, guid: 9be2a0ec4c31e7447b3b03b24252bc40, type: 3}
       propertyPath: m_RootOrder
       value: 6

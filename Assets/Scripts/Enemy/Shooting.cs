@@ -6,27 +6,29 @@ namespace Dyelaga.Enemy
 {
     public class Shooting : MonoBehaviour
     {
-        public float BaseFireSpeed = 0.05f;
-        public float BaseTimeBetweenShots = 0.5f;
+        public float MinimumTimeBetweenShots = 0.5f;
+        public float OddsOfShot = 0.5f;
         
         Bullets _bullets;
         float _timeSinceLastFire;
         float _timeBetweenShots;
+        float _oddsOfShot;
         BulletDirection _fireDirection;
+        GameObject _player;
 
         void Start()
         {
+            _player = GameObject.FindGameObjectWithTag("Player");
             _bullets = GetComponent<Bullets>();
-            _timeSinceLastFire = BaseFireSpeed;
-            _timeBetweenShots = BaseTimeBetweenShots;
+            _timeSinceLastFire = 0;
+            _timeBetweenShots = MinimumTimeBetweenShots;
+            _oddsOfShot = OddsOfShot;
             _fireDirection = BulletDirection.Down;
         }
         
         void Update()
         {
-                // TODO: Figure out where the player is for position
-
-                // TODO: Make a random decision on whether to fire (will replace timing logic)
+            // TODO: Set fire direction to player direction
         }
 
         void FixedUpdate()
@@ -35,7 +37,9 @@ namespace Dyelaga.Enemy
             _timeSinceLastFire += Time.fixedDeltaTime;
             if (_timeSinceLastFire >= _timeBetweenShots)
             { 
-                _bullets.SpawnBullet(_fireDirection, transform.position);
+                if (UnityEngine.Random.Range(0f, 1f) < _oddsOfShot) {
+                    _bullets.SpawnBullet(_fireDirection, transform.position);
+                }
                 _timeSinceLastFire = 0;
             }
         }
