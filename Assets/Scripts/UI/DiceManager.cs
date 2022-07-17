@@ -156,7 +156,7 @@ namespace Dyelaga.GameManager {
                 int xFuzz = UnityEngine.Random.Range(-jiggle, jiggle);
                 int yFuzz = UnityEngine.Random.Range(-jiggle, jiggle);
                 int rotation = UnityEngine.Random.Range(-90, 90);
-                x.Value = UnityEngine.Random.Range(1, 6); 
+                x.Value = UnityEngine.Random.Range(1, 7); 
                 x.Position = DiePosition.Pool;
                 x.GameObject = Instantiate (dicebuttonPrefab, 
                     new Vector2(
